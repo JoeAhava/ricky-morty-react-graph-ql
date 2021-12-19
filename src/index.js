@@ -2,13 +2,16 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
+import { Provider } from "./context";
 
 document.body.style.margin = 0;
 document.body.style.padding = 0;
 
 ReactDOM.render(
 	<React.StrictMode>
-		<App />
+		<Provider value={{ dark: false }}>
+			<App />
+		</Provider>
 	</React.StrictMode>,
 	document.getElementById("root"),
 );

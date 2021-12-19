@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
+import { Context } from "./context";
 import ThemedContainer from "./ThemedContainer";
+
 function App() {
+	const ctx = useContext(Context);
 	return (
-		<ThemedContainer>
+		<ThemedContainer dark={ctx.dark}>
 			<header>Hello</header>
 		</ThemedContainer>
 	);

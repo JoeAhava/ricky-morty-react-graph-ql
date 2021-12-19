@@ -6,9 +6,9 @@ const Container = styled.section`
 	padding: 0;
 	width: 100vw;
 	min-height: 100vh;
-	background-color: ${(dark) => (dark ? "black" : "white")};
+	background-color: ${(props) => (props.dark ? "black" : "white")};
 `;
 
-export default function ThemedContainer(props) {
-	return <Container>{props.children}</Container>;
+export default function ThemedContainer({ dark }) {
+	return <Container dark={dark}></Container>;
 }
